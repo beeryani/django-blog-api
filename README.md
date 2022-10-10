@@ -1,3 +1,3 @@
 # Blog
 
-The aim for this project is focused on building a simple blog project to master Django framework.
+The aim of this project is to build a simple blog project to master Django framework.

@@ -1,3 +1,6 @@
+{% extends 'starter.html' %}
+{% block content %}
+
 <!DOCTYPE html>
 <h1>
     {{ post.title }}
@@ -6,3 +9,5 @@
 <br>
 <a href="{% url 'blog_app:home' %}"> Back</a>
 </html>
+
+{% endblock %}

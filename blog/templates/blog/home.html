@@ -4,8 +4,8 @@
 <h3>Read my latest takes right here</h3>
 <br>
 <ul>
-    {% for x in object_list%}
-        <li>{{ x.title }} - {{ x.author }}</li>
+    {% for blog in post_list%}
+        <li><a href="{% url 'blog_app:blog' pk=blog.pk%}">{{ blog.title }}</a> - {{ blog.author }}</li>
     {% endfor%}
 </ul>
 <html>

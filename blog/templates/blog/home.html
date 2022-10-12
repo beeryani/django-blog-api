@@ -5,7 +5,7 @@
 <br>
 <ul>
     {% for blog in post_list%}
-        <li><a href="{% url 'blog_app:blog' pk=blog.pk%}">{{ blog.title }}</a> - {{ blog.author }}</li>
+        <li><a href="{% url 'blog_app:blog' pk=blog.pk %}">{{ blog.title }}</a> - {{ blog.author }}</li>
     {% endfor%}
 </ul>
 <html>

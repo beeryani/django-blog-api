@@ -2,9 +2,8 @@
 {% block content %}       
 <!DOCTYPE html>
 <title>blog</title>
-<h1>Welcome to my blog application!</h1>
-<h3>Read my latest takes right here</h3>
 <br>
+<h4>Read my latest takes right here</h4>
 <ul>
     {% for blog in post_list%}
         <li><a href="{% url 'blog_app:blog' pk=blog.pk %}">{{ blog.title }}</a> - {{ blog.author }}</li>

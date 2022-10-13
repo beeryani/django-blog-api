@@ -11,6 +11,7 @@ class BlogDetailView(DetailView):
     model = Post
     template_name = "blog_detail.html"
 
+
 class AddBlogDetailView(CreateView):
     model = Post
     template_name = "add_blog.html"

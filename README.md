@@ -1,6 +1,11 @@
 # Personal Blog Project
 
-The aim of this project is to build a simple blog project to master Django framework.
+The goals of this project are to:
+
+1.  Learn more about Django Framework
+2.  Learn how React can be integrated with a Python backend framework.
+3.  Use postgres as a database
+4.  Deploy a fullstack application on a production environment.
 
 # Getting Started
 
@@ -15,12 +20,22 @@ Install project dependencies:
 
     $ pip install -r requirements.txt
     
-    
+## Steps for Django setup
+
 Then simply apply the migrations:
 
     $ python manage.py migrate
-    
 
-You can now run the development server:
+## Steps for React App
+
+This app uses [Vite](https://vitejs.dev/) as the bundler hence the integration and configuration will vary
+
+Use the below command after installing the requirements:
+    
+    $ cd django-blog-frontend
+    $ yarn
+    $ yarn build
+
+Now, You can run the development server:
 
     $ python manage.py runserver

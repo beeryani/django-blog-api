@@ -1,4 +1,4 @@
-# Personal Blog Project
+# BLOG PROJECT BACKEND API
 
 The goals of this project are to:
 
@@ -31,8 +31,7 @@ Then simply apply the migrations:
 This app uses [Vite](https://vitejs.dev/) as the bundler hence the integration and configuration will vary
 
 Use the below command after installing the requirements:
-    
-    $ cd django-blog-frontend
+
     $ yarn
     $ yarn build
 

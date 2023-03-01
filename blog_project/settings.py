@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "corsheaders",
-    "django_summernote",
-    "blog_backend",
+    "blog_backend.apps.BlogBackendConfig",
+    "reset_migrations",
 ]
 
 MIDDLEWARE = [
@@ -60,7 +60,7 @@ ROOT_URLCONF = "blog_project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "django-blog-frontend/dist")],
+        "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -82,9 +82,9 @@ WSGI_APPLICATION = "blog_project.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "blog_lyfe",
+        "NAME": "myproject",
         "USER": "postgres",
-        "PASSWORD": "password123",
+        "PASSWORD": "kukku1973",
         "HOST": "localhost",
         "PORT": "5432",
     }
@@ -118,21 +118,11 @@ TIME_ZONE = "UTC"
 
 USE_I18N = True
 
-USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "/static/"
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "/build/static/")]
-
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-MEDIA_URL = "/media/"
-
-MEDIA_ROOT = [os.path.join(BASE_DIR, "media")]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -140,8 +130,6 @@ MEDIA_ROOT = [os.path.join(BASE_DIR, "media")]
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
     ]
@@ -150,3 +138,5 @@ REST_FRAMEWORK = {
 SUMMERNOTE_THEME = "bs4"
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
+
+CORS_ORIGIN_ALLOW_ALL = True

@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "blog_backend.apps.BlogBackendConfig",
-    "reset_migrations",
 ]
 
 MIDDLEWARE = [

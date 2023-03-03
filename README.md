@@ -25,16 +25,3 @@ Install project dependencies:
 Then simply apply the migrations:
 
     $ python manage.py migrate
-
-## Steps for React App
-
-This app uses [Vite](https://vitejs.dev/) as the bundler hence the integration and configuration will vary
-
-Use the below command after installing the requirements:
-
-    $ yarn
-    $ yarn build
-
-Now, You can run the development server:
-
-    $ python manage.py runserver

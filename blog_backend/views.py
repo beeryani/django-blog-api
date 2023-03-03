@@ -15,7 +15,7 @@ class BlogPostListView(ListAPIView):
 
     def get(self, request):
         return self.list(request)
-    
+
     def post(self, request, format=None):
         serializer = BlogPostSerializer(data=request.data)
         if serializer.is_valid():
@@ -28,7 +28,7 @@ class BlogPostListView(ListAPIView):
 
 
 class BlogPostDetailedView(RetrieveAPIView):
-    
+
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
     permission_classes = [permissions.AllowAny]
@@ -38,12 +38,12 @@ class BlogPostDetailedView(RetrieveAPIView):
             return BlogPost.objects.get(pk=pk)
         except BlogPost.DoesNotExist:
             raise Http404
-    
+
     def get(self, request, pk, format=None):
         queryset = self.get_object(pk)
         serializer = BlogPostSerializer(queryset)
         return Response(serializer.data)
-    
+
     def put(self, request, pk, format=None):
         queryset = self.get_object(pk)
         serializer = BlogPostSerializer(queryset, data=request.data)
@@ -59,4 +59,3 @@ class BlogPostDetailedView(RetrieveAPIView):
 
     def get_serializer_class(self):
         return BlogPostSerializer
-    

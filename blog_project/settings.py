@@ -15,7 +15,7 @@ import os
 import environ
 
 # Initialise environment variables
-env = environ.Env()
+env = environ.Env(DEBUG=(bool, True) )
 environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,9 +29,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -89,8 +88,8 @@ DATABASES = {
         "NAME": env("DATABASE_NAME"),
         "USER": env("DATABASE_USER"),
         "PASSWORD": env("DATABASE_PASS"),
-        "HOST": "localhost",
-        "PORT": "5432",
+        "HOST": env("DATABASE_HOST"),
+        "PORT": env("DATABASE_PORT"),
     }
 }
 
@@ -138,8 +137,6 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
     ]
 }
-
-SUMMERNOTE_THEME = "bs4"
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
 

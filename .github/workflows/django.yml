@@ -23,7 +23,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       env: 
-        SECRET_KEY: 8a3b356a2f52bdbe9b93e3c2eb295eb37383b618139e4de48b
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt

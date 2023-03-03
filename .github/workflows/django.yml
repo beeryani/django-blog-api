@@ -28,5 +28,6 @@ jobs:
     - name: Run Tests
       env: 
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
       run: |
         python manage.py test

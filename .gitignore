@@ -1,6 +1,7 @@
 django-env
 __pycache__
 db.sqlite3
+blog_project/settings.py
 
 .DS_STORE
 node_modules

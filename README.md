@@ -1,6 +1,6 @@
 # BLOG PROJECT BACKEND API
 
-The objectives of this project are to:
+## Objectives
 
 1.  Learn more about Django Rest Framework
 2.  Learn how to build scalable APIs, connect external DB (eg: Postgres) and deploy them on a PaaS.

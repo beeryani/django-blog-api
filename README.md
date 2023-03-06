@@ -23,12 +23,21 @@ Install project dependencies:
 
     $ pip install -r requirements.txt
     
+## API Endpoints
+
+Take a look at 5 recent blogs: `blog/`
+Detailed view of a Blog: `blog/<int:pk>`
+Create a Blog: `createblog/`
+Update a Blog: `updateblog/<int:pk>/`
+Delete a Blog: `deleteblog/<int:pk>/`
+
+
 ## Steps for Django setup
 
 Based on local and prod deployment, refer to `settings` folder and make changes to `manage.py`:
 
 ```python
-    $ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.<settings file based on use case>") ## settings.base is default
+$ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.<settings file based on use case>") ## settings.base is default
 ```
 
 Then simply apply the migrations:

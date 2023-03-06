@@ -25,11 +25,11 @@ Install project dependencies:
     
 ## API Endpoints
 
-Take a look at 5 recent blogs: `blog/`
-Detailed view of a Blog: `blog/<int:pk>`
-Create a Blog: `createblog/`
-Update a Blog: `updateblog/<int:pk>/`
-Delete a Blog: `deleteblog/<int:pk>/`
+1. Take a look at 5 recent blogs: `blog/`
+2. Detailed view of a Blog: `blog/<int:pk>`
+3. Create a Blog: `createblog/`
+4. Update a Blog: `updateblog/<int:pk>/`
+5. Delete a Blog: `deleteblog/<int:pk>/`
 
 
 ## Steps for Django setup

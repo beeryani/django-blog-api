@@ -1,11 +1,14 @@
 # BLOG PROJECT BACKEND API
 
-The goals of this project are to:
+The objectives of this project are to:
 
-1.  Learn more about Django Framework
-2.  Learn how React can be integrated with a Python backend framework.
-3.  Use postgres as a database
-4.  Deploy a fullstack application on a production environment.
+1.  Learn more about Django Rest Framework
+2.  Learn how to build scalable APIs, connect external DB (eg: Postgres) and deploy them on a PaaS.
+3.  Integrate React UI using this API.
+4.  Learn Django Best Practices aligned with production deployment requirements.
+    1. Pass DB credentials as env secrets.
+    2. Creating settings package to manage settings for development, staging and production separately.
+    3. Setting up GH Actions for continuous testing and CI/CD in prod.
 
 # Getting Started
 
@@ -21,6 +24,9 @@ Install project dependencies:
     $ pip install -r requirements.txt
     
 ## Steps for Django setup
+
+Based on local and prod deployment, refer to `settings` folder and make changes to `manage.py`:
+    $ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.<settings file based on use case>") ## settings.base is default
 
 Then simply apply the migrations:
 

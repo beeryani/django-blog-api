@@ -26,7 +26,10 @@ Install project dependencies:
 ## Steps for Django setup
 
 Based on local and prod deployment, refer to `settings` folder and make changes to `manage.py`:
+
+```python
     $ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.<settings file based on use case>") ## settings.base is default
+```
 
 Then simply apply the migrations:
 

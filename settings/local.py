@@ -16,7 +16,7 @@ import environ
 from .base import *
 
 # Initialise environment variables
-env = environ.Env(DEBUG=(bool, True) )
+env = environ.Env(DEBUG=(bool, True))
 environ.Env.read_env()
 DEBUG = True
 
@@ -32,7 +32,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

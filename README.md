@@ -16,13 +16,13 @@ First clone the repository from Github and switch to the new directory:
 
     $ git clone https://github.com/praty-1698/django-blog-project.git
     $ cd django-blog-project
-    
+
 Activate the virtualenv for your project.
-    
+
 Install project dependencies:
 
     $ pip install -r requirements.txt
-    
+
 ## API Endpoints
 
 1. Take a look at 5 recent blogs: `blog/`

@@ -15,8 +15,6 @@ from pathlib import Path
 
 import environ
 
-from .base import *
-
 # Initialise environment variables
 env = environ.Env(DEBUG=(bool, True))
 environ.Env.read_env()

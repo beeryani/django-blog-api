@@ -11,6 +11,9 @@ The objectives of this project are to:
    1. Pass DB credentials as env secrets.
    2. Create settings package to manage settings for development, staging and production separately.
    3. Set up GH Actions for continuous testing and CI/CD in prod.
+5. Learn Docker using this as the sample.
+   1. Setup for development environment.
+   2. Setup for production environment with gunicorn and nginx.
 
 ## Functional Requirements
 
@@ -70,3 +73,7 @@ $ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.<settings file based
 Then simply apply the migrations:
 
     $ python manage.py migrate
+
+### #To-Do
+
+1. Add separate production settings file to avoid conflict in further development.

@@ -2,9 +2,10 @@ version: '3.8'
 
 services:
   web:
-    build: .
-    volumes:
-      - .:/app
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    platform: linux/amd64
     command: gunicorn settings.wsgi:application --bind 0.0.0.0:8000
     ports:
       - 8000:8000
